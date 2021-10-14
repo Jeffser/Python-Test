@@ -4,7 +4,7 @@ win = Tk()
 win.geometry("360x800")
 win.resizable(False, False)
 win.title("Test Android")
-lbl = Label(text=num, font="Arial, 24")
+lbl = Label(text="a", font="Arial, 24")
 lbl.grid(row=0, column=0, columnspan=2)
 
 def plus():
