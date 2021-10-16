@@ -1,5 +1,9 @@
 import os, sys, pip, getpass
-from pytube import YouTube, Playlist
+try:
+    from pytube import YouTube, Playlist
+except:
+    if hasattr(pip, 'main'): pip.main(['install', 'pytube'])
+    else: pip._internal.main(['install', 'pytube'])
 print("Instant Music by Tentri#5008")
 if os.name == "posix":
     carp = "/storage/emulated/0/Dowload" #I'm assuming you are using android, change it if you use linux
