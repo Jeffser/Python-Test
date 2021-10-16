@@ -1,4 +1,4 @@
-import os, sys, pyperclip, getpass, pip
+import os, sys, pip
 from pytube import YouTube, Playlist
 print("Instant Music by Tentri#5008")
 carp = "/storage/emulated/0/Dowload"
