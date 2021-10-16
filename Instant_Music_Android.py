@@ -27,5 +27,5 @@ def get(link):
             print("Listo, porfavor reinicie la aplicación")
             input()
             exit()
-print("Link: ", end="")
+print("Link:")
 get(input())
