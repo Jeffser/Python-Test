@@ -27,4 +27,4 @@ def get(link):
             print("Listo, porfavor reinicie la aplicación")
             input()
             exit()
-get(pyperclip.paste())
+get(input())
