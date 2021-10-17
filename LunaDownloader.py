@@ -2,7 +2,7 @@ import os, sys
 from tkinter import *
 import tkinter.ttk as ttk
 from pytube import YouTube, Playlist
-import requests, urllib
+import urllib
 from PIL import Image, ImageTk
 from io import BytesIO
 win = Tk()
