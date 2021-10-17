@@ -17,7 +17,7 @@ link = "https://www.youtube.com/watch?v=cNoy_b_JYU0" #win.clipboard_get()
 YT = YouTube(link)
 cTitulo = Canvas(win, bg="lightblue", highlightthickness=0)
 cTitulo.pack(fill="x")
-lblTitulo = Label(cTitulo, text="Luna Downloader", font="Arial, " + (str) ((int) ((wWidth/15))), bg="lightblue").pack(anchor="center")
+lblTitulo = Label(cTitulo, text="Luna Dow-nloader", font="Arial, " + (str) ((int) ((wWidth/15))), bg="lightblue").pack(anchor="center")
 
 cLink = Canvas(win, bg="seagreen1", highlightthickness=0)
 cLink.pack(fill="x")
