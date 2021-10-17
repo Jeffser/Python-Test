@@ -1,10 +1,13 @@
-from tkinter import *
-from pytube import YouTube, Playlist
-win = Tk()
-win.title("LunaDownloader")
-win.geometry("360x800")
-win.resizable(False, False)
-link = win.clipboard_get()
-YT = YouTube(link)
-lbl = Label(win, text = YT.title).grid()
-win.mainloop()
+import sys
+from PySide6.QtCore import Qt, Slot
+from PySide6.QtWidgets import (QApplication, QLabel, QPushButton,
+                               QVBoxLayout, QWidget)
+from __feature__ import snake_case, true_property
+
+if __name__=="__main__":
+    app = QApplication(sys.argv)
+    link = app.clipboard().text()
+    texto = QLabel(link)
+    texto.alignment = Qt.AlignCenter
+    texto.show()
+    sys.exit(app.exec_())
