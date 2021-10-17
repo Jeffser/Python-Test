@@ -31,13 +31,16 @@ pngPlus = Image.open(BytesIO(urllib.request.urlopen("https://raw.githubuserconte
 pngPlus = pngPlus.resize(((int) (pngPlus.width * wHeight /10000), (int) (pngPlus.height * wHeight /10000)), Image.ANTIALIAS)
 pngPlus = ImageTk.PhotoImage(pngPlus)
 btnBotones = Button(cBotones, highlightthickness=0, image=pngPlus, bg="DarkOliveGreen1", bd = 0)
-btnBotones.pack(fill="x", anchor="center", side=TOP)
+btnBotones.grid(row=0, column=0, sticky="nsew")
 
 pngDown = Image.open(BytesIO(urllib.request.urlopen("https://raw.githubusercontent.com/Tentrillicom/Python-Test/main/Data/download.png").read()))
 pngDown = pngDown.resize(((int) (pngDown.width * wHeight /10000), (int) (pngDown.height * wHeight /10000)), Image.ANTIALIAS)
 pngDown = ImageTk.PhotoImage(pngDown)
 btn2Botones = Button(cBotones, highlightthickness=0, image=pngDown, bg="RoyalBlue1", bd = 0)
-btn2Botones.pack(fill="x", anchor="center", side=TOP)
+btn2Botones.grid(row=0, column=1, sticky="nsew")
+cBotones.grid_columnconfigure(0, weight=1, uniform="group1")
+cBotones.grid_columnconfigure(1, weight=1, uniform="group1")
+cBotones.grid_rowconfigure(0, weight=1)
 
 fVideos = Frame(win)
 fVideos.pack(expand=True, fill=BOTH)
