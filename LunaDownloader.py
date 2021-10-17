@@ -23,7 +23,23 @@ lblTitulo = Label(cTitulo, text="Luna Downloader", font="Arial, 20", bg="lightbl
 
 cLink = Canvas(win, bg="seagreen1", highlightthickness=0)
 cLink.pack(fill="x")
-lblLink = Label(cLink, text=YT.title, font="Arial, 8", bg="seagreen1").grid()
+lblLink = Label(cLink, text=YT.title, font="Arial, 8", bg="seagreen1")
+lblLink.grid(row=0, column=0, sticky="nsew")
+pngReload = Image.open(BytesIO(urllib.request.urlopen("https://raw.githubusercontent.com/Tentrillicom/Python-Test/main/Data/reload.png").read()))
+pngReload = pngReload.resize(((int) (pngReload.width * wHeight /10000), (int) (pngReload.height * wHeight /10000)), Image.ANTIALIAS)
+pngReload = ImageTk.PhotoImage(pngReload)
+
+def relLink():
+    global YT, link, lblLink
+    link = win.clipboard_get()
+    YT = YouTube(link)
+    lblLink.config(text=YT.title)
+
+btnLink = Button(cLink, image=pngReload, highlightthickness=0, bd=0, command=relLink)
+btnLink.grid(row=0, column=1, sticky="nsew")
+cLink.grid_columnconfigure(0, weight=10, uniform="group1")
+cLink.grid_columnconfigure(1, weight=1, uniform="group1")
+cLink.grid_rowconfigure(0, weight=1)
 
 cBotones = Canvas(win, bg="snow", highlightthickness=0)
 cBotones.pack(fill="x")
